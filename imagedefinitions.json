@@ -1,6 +1,6 @@
 [
   {
-    "name": "app",
-    "imageUri": "aws_account_id.dkr.ecr.region.amazonaws.com/app:latest"
+    "name": "flask-login-app",
+    "imageUri": "aws_account_id.dkr.ecr.region.amazonaws.com/flask-login-app:latest"
   }
 ]
