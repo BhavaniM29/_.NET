@@ -1,6 +1,6 @@
 [
   {
     "name": "ecs",
-    "imageUri": "aws_account_id.dkr.ecr.region.amazonaws.com/ecs:latest"
+    "imageUri": "850995548542.dkr.ecr.us-east-1.amazonaws.com/ecs:latest"
   }
 ]
