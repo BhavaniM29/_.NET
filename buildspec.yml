@@ -21,7 +21,7 @@ phases:
 
       # Fetch the current task definition
       - echo Fetching current task definition...
-      - aws ecs describe-task-definition --task-definition DDTask --query 'taskDefinition' --output json > taskdef.json
+      - aws ecs describe-task-definition --task-definition DDTaskdef --query 'taskDefinition' --output json > taskdef.json
       - echo Task definition fetched and saved to taskdef.json
 
       # Create updated appspec.yaml
@@ -33,7 +33,7 @@ phases:
           - TargetService:
               Type: AWS::ECS::Service
               Properties:
-                TaskDefinition: "arn:aws:ecs:$AWS_DEFAULT_REGION:$AWS_ACCOUNT_ID:task-definition/DDTask"
+                TaskDefinition: "arn:aws:ecs:$AWS_DEFAULT_REGION:$AWS_ACCOUNT_ID:task-definition/DDTaskdef"
                 LoadBalancerInfo:
                   ContainerName: "$IMAGE_REPO_NAME"
                   ContainerPort: 80
